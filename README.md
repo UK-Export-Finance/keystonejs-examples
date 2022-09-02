@@ -1,1 +1,2 @@
-# keystonejs-examples
+# KeystoneJS examples
+
