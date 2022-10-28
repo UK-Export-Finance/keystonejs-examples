@@ -69,3 +69,24 @@ export const extendGraphqlSchema = graphQLSchemaExtension<Context>({
   },
 });
 ```
+
+Keystone config example importing the custom schema:
+
+```js
+import { config } from '@keystone-6/core';
+import { lists } from './schema';
+import { session } from './auth';
+import { extendGraphqlSchema } from './custom-schema';
+
+export default (
+  config({
+    db: {
+      provider: 'sqlite',
+      url: 'file:./keystone.db',
+    },
+    lists,
+    session,
+    extendGraphqlSchema,
+  })
+);
+```

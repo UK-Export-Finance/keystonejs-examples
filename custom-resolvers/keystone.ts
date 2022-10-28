@@ -1,6 +1,7 @@
 import { config } from '@keystone-6/core';
 import { lists } from './schema';
 import { session } from './auth';
+import { extendGraphqlSchema } from './custom-schema';
 
 export default (
   config({
@@ -10,5 +11,6 @@ export default (
     },
     lists,
     session,
+    extendGraphqlSchema,
   })
 );
